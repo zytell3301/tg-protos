@@ -1,0 +1,20 @@
+syntax = "proto3";
+package zytel3301.UsersService;
+option go_package = "github.com/zytel3301/tg-users-service/pkg/UsersService";
+import "google/protobuf/empty.proto";
+import "api/pb/UsersService/error.proto";
+
+service UsersService{
+  rpc NewUser(User) returns (zytel3301.error.Error);
+}
+
+message User {
+  string Id = 1;
+  string Name = 2;
+  string Lastname = 3;
+  string Bio = 4;
+  string Username = 5;
+  string Phone = 6;
+  bool Online_status = 7;
+  int64 Created_at = 8;
+}
