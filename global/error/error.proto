@@ -1,0 +1,8 @@
+syntax = "proto3";
+package zytel3301.error;
+option go_package = "error";
+
+message Error {
+  string message = 1;
+  uint32 code = 2;
+}
