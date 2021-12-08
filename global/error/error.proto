@@ -1,6 +1,10 @@
 syntax = "proto3";
 package zytel3301.error;
-option go_package = "error";
+
+// go_package option is set to ./error instead of ./pkg/error
+// for better generalization but it is recommended to export it
+// to ./pkg/error directory
+option go_package = "./error";
 
 message Error {
   string message = 1;
