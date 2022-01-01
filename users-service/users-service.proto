@@ -6,10 +6,10 @@ import "api/pb/UsersService/error.proto";
 service UsersService{
   rpc NewUser(User) returns (zytell3301.error.Error);
   rpc DeleteUser(Phone) returns (zytell3301.error.Error);
-  rpc UpdateUsername(UpdateUsername) returns (zytell3301.error.Error);
+  rpc UpdateUsername(UpdateUsernameMessage) returns (zytell3301.error.Error);
 }
 
-message UpdateUsername {
+message UpdateUsernameMessage {
   string Phone = 1;
   string Username = 2;
 }
