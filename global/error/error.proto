@@ -1,5 +1,5 @@
 syntax = "proto3";
-package zytel3301.error;
+package zytell3301.error;
 
 // go_package option is set to ./error instead of ./pkg/error
 // for better generalization but it is recommended to export it
