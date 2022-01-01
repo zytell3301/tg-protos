@@ -5,7 +5,7 @@ import "api/pb/UsersService/error.proto";
 
 service UsersService{
   rpc NewUser(User) returns (zytell3301.error.Error);
-  rpc DeleteUser(Id) returns (zytell3301.errpr.Error);
+  rpc DeleteUser(Id) returns (zytell3301.error.Error);
 }
 
 message Id {
