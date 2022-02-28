@@ -25,7 +25,8 @@ message LoginRequest {
 
 message VerifySecurityCodeRequest {
   string Phone = 1;
-  SecurityCode SecurityCode = 2;
+  string SecurityCode = 2;
+  string Action = 3;
 }
 
 message LoginResponse {
