@@ -10,6 +10,7 @@ service UsersService{
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc RequestSignupSecurityCode(Phone) returns (zytell3301.error.Error);
   rpc RequestLoginSecurityCode(Phone) returns (zytell3301.error.Error);
+  rpc VerifySecurityCode(VerifySecurityCodeRequest) returns (zytell3301.error.Error);
 }
 
 message UpdateUsernameMessage {
@@ -20,6 +21,11 @@ message UpdateUsernameMessage {
 message LoginRequest {
   SecurityCode securityCode = 1;
   string Phone = 2;
+}
+
+message VerifySecurityCodeRequest {
+  string Phone = 1;
+  SecurityCode SecurityCode = 2;
 }
 
 message LoginResponse {
