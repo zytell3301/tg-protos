@@ -11,6 +11,16 @@ service UsersService{
   rpc RequestSignupSecurityCode(Phone) returns (zytell3301.error.Error);
   rpc RequestLoginSecurityCode(Phone) returns (zytell3301.error.Error);
   rpc VerifySecurityCode(VerifySecurityCodeRequest) returns (zytell3301.error.Error);
+  rpc GetUserByUsername(GetUserByUsernameRequest) returns (GetUserByUsernameResponse);
+}
+
+message GetUserByUsernameRequest {
+  string Username = 1;
+}
+
+message GetUserByUsernameResponse {
+  User User = 1;
+  zytell3301.error.Error Error = 2;
 }
 
 message UpdateUsernameMessage {
