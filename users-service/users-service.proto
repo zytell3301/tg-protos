@@ -8,6 +8,7 @@ service UsersService{
   rpc DeleteUser(Phone) returns (zytell3301.error.Error);
   rpc UpdateUsername(UpdateUsernameMessage) returns (zytell3301.error.Error);
   rpc Login(LoginRequest) returns (LoginResponse);
+  rpc RequestSignupSecurityCode(Phone) returns (zytell3301.error.Error);
 }
 
 message UpdateUsernameMessage {
