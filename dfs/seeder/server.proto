@@ -1,6 +1,6 @@
 syntax = "proto3";
 package zytell3301.dfs.sncp;
-option go_package = "github.com/zytell3301/tg-dfs-seeder";
+option go_package = "github.com/zytell3301/tg-dfs-seeder/pkg/dfs/seeder";
 
 message Server {
   string InstanceId = 1;
